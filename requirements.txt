@@ -1,0 +1,17 @@
+numpy
+ipykernel
+scipy
+pandas
+matplotlib
+seaborn
+jupyterlab  
+pytorch
+torchvision
+nilearn
+nibabel
+h5py
+einops
+datalad
+pybids
+templateflow
+tensorboard
