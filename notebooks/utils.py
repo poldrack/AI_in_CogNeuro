@@ -21,7 +21,7 @@ def get_subject_common_brain_mask(subject, bids_dir, fmriprep_dir=None):
     )
     if os.path.exists(common_mask_file):
         common_mask = nib.load(common_mask_file)
-        print(f'Using existing common mask for subject {subject}')
+        # print(f'Using existing common mask for subject {subject}')
         return common_mask
 
     runs = get_subject_runs(subject, bids_dir)
@@ -48,7 +48,7 @@ def get_group_common_mask(layout, overwrite=False):
 
     maskdata = None
     for subject in layout.get_subjects():
-        subject_mask = get_common_brain_mask(subject, layout.root)
+        subject_mask = get_subject_common_brain_mask(subject, layout.root)
         if maskdata is None:
             maskdata = subject_mask.get_fdata()
         else:
@@ -68,10 +68,10 @@ def get_difumo_mask():
 
     difumo64_file = [i for i in atlas if '64' in i.as_posix()][0]
 
-    # create a mask for visual cortices using the relevant difumo componnets: 2, 3, 16, 29, 42, 55, 31
+    # create a mask for visual cortices using the relevant difumo componnets: 2, 3, 16, 29, 31, 35, 42, 46, 55
     # (need to subtract one from these are they are 1-indexed)
 
-    components = [1, 2, 15, 28, 41, 54, 30]
+    components = [1, 2, 15, 28, 30, 34, 41, 45, 54]
     difumo_mask = nib.load(difumo64_file)
     mask_data = (difumo_mask.get_fdata() > 0).astype(int)
     mask = (mask_data[..., components].sum(axis=-1) > 0).astype('int32')
@@ -79,12 +79,12 @@ def get_difumo_mask():
     return mask_img
 
 
-def get_subject_runs(subject, bids_dir, verbose=True):
+def get_subject_runs(subject, bids_dir, verbose=False):
     layout = BIDSLayout(bids_dir)
     runs = layout.get_runs(subject=subject)
     if verbose:
         print(f'found {len(runs)} runs for subject')
-    return runs
+    return [int(i) for i in runs]
    
 
 def list_all_datasets(hdf5_object, path='/'):
@@ -148,4 +148,3 @@ def get_data_frame(subject, h5_dir):
     data_df.reset_index(drop=True, inplace=True)
 
     return data_df
-
