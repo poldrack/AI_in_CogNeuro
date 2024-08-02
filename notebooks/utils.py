@@ -6,18 +6,36 @@ import templateflow.api as tflow
 import templateflow
 import nibabel as nib
 import numpy as np
+from nilearn.image import load_img, mean_img, resample_img
+
+
+def get_combined_subject_difumo_mask(subject, data_dir):
+    sub_mask = get_subject_common_brain_mask(subject, data_dir)
+
+    # get data from the difumo visual mask
+    difumo_mask = resample_img(get_difumo_mask(), sub_mask.affine, sub_mask.shape, 
+                        interpolation='nearest')
+    mask = nib.Nifti1Image(np.logical_and(sub_mask.get_fdata().astype('int32'), 
+                                            difumo_mask.get_fdata().astype('int32')).astype('int32'), 
+                            sub_mask.affine) 
+    return mask
+
+
+def get_subject_vt_mask(subject, vtmask_dir, res=3):
+    vt_mask_file = os.path.join(vtmask_dir, f'sub-{subject}_mask4vt_space-MNI152NLin2009cAsym_res-{res}.nii.gz')
+    return nib.load(vt_mask_file) 
 
 
 def get_bids_filename(subject, run, subdir='func', task='objectviewing', space='MNI152NLin2009cAsym', 
-                      res=2, desc='preproc', suffix='bold', extension='nii.gz'):
+                      res=3, desc='preproc', suffix='bold', extension='nii.gz'):
     return f'sub-{subject}/{subdir}/sub-{subject}_task-{task}_run-{run}_space-{space}_res-{res}_desc-{desc}_{suffix}.{extension}'
 
 
-def get_subject_common_brain_mask(subject, bids_dir, fmriprep_dir=None):
+def get_subject_common_brain_mask(subject, bids_dir, res=3, fmriprep_dir=None):
     fmriprep_dir = os.path.join(bids_dir, 'derivatives', 'fmriprep') if fmriprep_dir is None else fmriprep_dir
     common_mask_file = os.path.join(
         fmriprep_dir,
-        f'sub-{subject}/func/sub-{subject}_task-objectviewing_space-MNI152NLin2009cAsym_res-2_desc-brain_mask.nii.gz'
+        f'sub-{subject}/func/sub-{subject}_task-objectviewing_space-MNI152NLin2009cAsym_res-{res}_desc-brain_mask.nii.gz'
     )
     if os.path.exists(common_mask_file):
         common_mask = nib.load(common_mask_file)
@@ -28,8 +46,9 @@ def get_subject_common_brain_mask(subject, bids_dir, fmriprep_dir=None):
     common_mask = None
     for run in runs:
         run = int(run)
-        mask_file = os.path.join(fmriprep_dir, get_bids_filename(subject, run, desc='brain', suffix='mask'))
+        mask_file = os.path.join(fmriprep_dir, get_bids_filename(subject, run, res=res, desc='brain', suffix='mask'))
         mask_img = nib.load(mask_file)
+        assert np.abs(mask_img.affine[0, 0]) == res, f'expected resolution {res} but got {mask_img.affine[0, 0]}'
         mask_data = mask_img.get_fdata().astype(bool)
         common_mask = mask_data if common_mask is None else np.logical_and(common_mask, mask_data)    
     print(f'found {np.sum(common_mask)} voxels in common mask')
@@ -38,17 +57,17 @@ def get_subject_common_brain_mask(subject, bids_dir, fmriprep_dir=None):
     return common_mask
 
 
-def get_group_common_mask(layout, overwrite=False):
+def get_group_common_mask(layout, res=3, overwrite=False):
     derivdir = os.path.join(layout.root, 'derivatives/common_mask')
     if not os.path.exists(derivdir):
         os.makedirs(derivdir)
-    maskfile = os.path.join(derivdir, 'group_common_mask.nii.gz')
+    maskfile = os.path.join(derivdir, f'group_common_mask_res-{res}.nii.gz')
     if os.path.exists(maskfile):
         return nib.load(maskfile)
 
     maskdata = None
     for subject in layout.get_subjects():
-        subject_mask = get_subject_common_brain_mask(subject, layout.root)
+        subject_mask = get_subject_common_brain_mask(subject, layout.root, res=res)
         if maskdata is None:
             maskdata = subject_mask.get_fdata()
         else:
@@ -148,3 +167,10 @@ def get_data_frame(subject, h5_dir):
     data_df.reset_index(drop=True, inplace=True)
 
     return data_df
+
+
+def get_layouts(data_dir, fmriprep_dir):
+    
+    layout = BIDSLayout(data_dir)
+    deriv_layout = BIDSLayout(fmriprep_dir, derivatives=True, validate=False)
+    return layout, deriv_layout
