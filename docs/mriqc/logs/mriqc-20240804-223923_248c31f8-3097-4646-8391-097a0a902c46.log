@@ -1,0 +1,1001 @@
+------------------------------------------------------------------
+  Running MRIQC version 24.1.0.dev0+g3fe90466.d20240417
+  ----------------------------------------------------------------
+  * BIDS dataset path: /data.
+  * Output folder: /out.
+  * Analysis levels: ['participant'].
+------------------------------------------------------------------
+
+2024-08-04 22:39:28 | IMPORTANT | mriqc            | Building MRIQC's workflows...
+2024-08-04 22:39:28 | IMPORTANT | mriqc            | DataLad dataset identified, attempting to `datalad get` unavailable files.
+2024-08-04 22:39:29 | IMPORTANT | mriqc            | DataLad dataset identified, attempting to `datalad get` unavailable files.
+2024-08-04 22:39:32 | IMPORTANT | mriqc            | Workflow building finished (exit code 0).
+2024-08-04 22:39:35 | WARNING  | mriqc            | IMPORTANT: Anonymized quality metrics (IQMs) will be submitted to MRIQC's metrics repository. Submission of IQMs can be disabled using the ``--no-sub`` argument. Please visit https://mriqc.readthedocs.io/en/latest/dsa.html to revise MRIQC's Data Sharing Agreement.
+2024-08-04 22:39:55 | WARNING  | nipype.workflow  | Storing result file without outputs
+2024-08-04 22:39:55 | WARNING  | nipype.workflow  | [Node] Error on "mriqc_wf.anatMRIQC.synthstrip_wf.pre_n4" (/tmp/work/mriqc_wf/anatMRIQC/synthstrip_wf/_in_file_..data..sub-1..anat..sub-1_T1w.nii.gz/pre_n4)
+2024-08-04 22:39:55 | WARNING  | nipype.workflow  | Storing result file without outputs
+2024-08-04 22:39:55 | WARNING  | nipype.workflow  | Storing result file without outputs
+2024-08-04 22:39:55 | WARNING  | nipype.workflow  | Storing result file without outputs
+2024-08-04 22:39:55 | WARNING  | nipype.workflow  | Storing result file without outputs
+2024-08-04 22:39:55 | WARNING  | nipype.workflow  | Storing result file without outputs
+2024-08-04 22:39:55 | WARNING  | nipype.workflow  | Storing result file without outputs
+2024-08-04 22:39:55 | WARNING  | nipype.workflow  | Storing result file without outputs
+2024-08-04 22:39:55 | WARNING  | nipype.workflow  | Storing result file without outputs
+2024-08-04 22:39:55 | WARNING  | nipype.workflow  | Storing result file without outputs
+2024-08-04 22:39:55 | WARNING  | nipype.workflow  | [Node] Error on "mriqc_wf.funcMRIQC.fMRI_HMC.estimate_hm" (/tmp/work/mriqc_wf/funcMRIQC/fMRI_HMC/_in_file_..data..sub-1..func..sub-1_task-objectviewing_run-09_bold.nii.gz/estimate_hm)
+2024-08-04 22:39:55 | WARNING  | nipype.workflow  | [Node] Error on "mriqc_wf.funcMRIQC.fMRI_HMC.estimate_hm" (/tmp/work/mriqc_wf/funcMRIQC/fMRI_HMC/_in_file_..data..sub-1..func..sub-1_task-objectviewing_run-01_bold.nii.gz/estimate_hm)
+2024-08-04 22:39:55 | WARNING  | nipype.workflow  | [Node] Error on "mriqc_wf.funcMRIQC.fMRI_HMC.estimate_hm" (/tmp/work/mriqc_wf/funcMRIQC/fMRI_HMC/_in_file_..data..sub-1..func..sub-1_task-objectviewing_run-05_bold.nii.gz/estimate_hm)
+2024-08-04 22:39:55 | WARNING  | nipype.workflow  | Storing result file without outputs
+2024-08-04 22:39:55 | WARNING  | nipype.workflow  | [Node] Error on "mriqc_wf.funcMRIQC.fMRI_HMC.estimate_hm" (/tmp/work/mriqc_wf/funcMRIQC/fMRI_HMC/_in_file_..data..sub-1..func..sub-1_task-objectviewing_run-08_bold.nii.gz/estimate_hm)
+2024-08-04 22:39:55 | WARNING  | nipype.workflow  | [Node] Error on "mriqc_wf.funcMRIQC.fMRI_HMC.estimate_hm" (/tmp/work/mriqc_wf/funcMRIQC/fMRI_HMC/_in_file_..data..sub-1..func..sub-1_task-objectviewing_run-11_bold.nii.gz/estimate_hm)
+2024-08-04 22:39:55 | ERROR    | nipype.workflow  | Node pre_n4.a0 (taskid=76) crashed: /out/logs/crash-20240804-223955-root-pre_n4.a0-789b6751-a9d7-4b97-bb5b-a6ef51438702.txt
+2024-08-04 22:39:55 | WARNING  | nipype.workflow  | [Node] Error on "mriqc_wf.funcMRIQC.fMRI_HMC.estimate_hm" (/tmp/work/mriqc_wf/funcMRIQC/fMRI_HMC/_in_file_..data..sub-1..func..sub-1_task-objectviewing_run-04_bold.nii.gz/estimate_hm)
+2024-08-04 22:39:55 | ERROR    | concurrent.futures | exception calling callback for <Future at 0x7fffee97b610 state=finished raised BrokenProcessPool>
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+concurrent.futures.process.BrokenProcessPool: A process in the process pool was terminated abruptly while the future was running or pending.
+2024-08-04 22:39:55 | WARNING  | nipype.workflow  | Storing result file without outputs
+2024-08-04 22:39:55 | WARNING  | nipype.workflow  | [Node] Error on "mriqc_wf.funcMRIQC.fMRI_HMC.estimate_hm" (/tmp/work/mriqc_wf/funcMRIQC/fMRI_HMC/_in_file_..data..sub-1..func..sub-1_task-objectviewing_run-10_bold.nii.gz/estimate_hm)
+2024-08-04 22:39:55 | WARNING  | nipype.workflow  | [Node] Error on "mriqc_wf.funcMRIQC.fMRI_HMC.estimate_hm" (/tmp/work/mriqc_wf/funcMRIQC/fMRI_HMC/_in_file_..data..sub-1..func..sub-1_task-objectviewing_run-12_bold.nii.gz/estimate_hm)
+2024-08-04 22:39:55 | WARNING  | nipype.workflow  | [Node] Error on "mriqc_wf.funcMRIQC.fMRI_HMC.estimate_hm" (/tmp/work/mriqc_wf/funcMRIQC/fMRI_HMC/_in_file_..data..sub-1..func..sub-1_task-objectviewing_run-07_bold.nii.gz/estimate_hm)
+2024-08-04 22:39:55 | WARNING  | nipype.workflow  | Storing result file without outputs
+2024-08-04 22:39:55 | WARNING  | nipype.workflow  | [Node] Error on "mriqc_wf.funcMRIQC.fMRI_HMC.estimate_hm" (/tmp/work/mriqc_wf/funcMRIQC/fMRI_HMC/_in_file_..data..sub-1..func..sub-1_task-objectviewing_run-06_bold.nii.gz/estimate_hm)
+2024-08-04 22:39:55 | ERROR    | nipype.workflow  | Node estimate_hm.a00 (taskid=54) crashed: /out/logs/crash-20240804-223955-root-estimate_hm.a00-f95d94b6-cca2-483a-8391-086fee868afd.txt
+2024-08-04 22:39:55 | ERROR    | nipype.workflow  | Node estimate_hm.a07 (taskid=68) crashed: /out/logs/crash-20240804-223955-root-estimate_hm.a07-2fe1dab7-b8f3-4283-815d-7bbb551fe99d.txt
+2024-08-04 22:39:55 | ERROR    | concurrent.futures | exception calling callback for <Future at 0x7fffee8ca510 state=finished raised BrokenProcessPool>
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+concurrent.futures.process.BrokenProcessPool: A process in the process pool was terminated abruptly while the future was running or pending.
+2024-08-04 22:39:55 | ERROR    | nipype.workflow  | Node estimate_hm.a08 (taskid=70) crashed: /out/logs/crash-20240804-223955-root-estimate_hm.a08-9d65ac5b-038e-45d7-84b1-4f59720b489a.txt
+2024-08-04 22:39:55 | WARNING  | nipype.workflow  | [Node] Error on "mriqc_wf.funcMRIQC.fMRI_HMC.estimate_hm" (/tmp/work/mriqc_wf/funcMRIQC/fMRI_HMC/_in_file_..data..sub-1..func..sub-1_task-objectviewing_run-03_bold.nii.gz/estimate_hm)
+2024-08-04 22:39:55 | ERROR    | nipype.workflow  | Node estimate_hm.a04 (taskid=62) crashed: /out/logs/crash-20240804-223955-root-estimate_hm.a04-1a8727ec-2710-4921-91ec-874e2d8239c4.txt
+2024-08-04 22:39:55 | WARNING  | nipype.workflow  | [Node] Error on "mriqc_wf.funcMRIQC.fMRI_HMC.estimate_hm" (/tmp/work/mriqc_wf/funcMRIQC/fMRI_HMC/_in_file_..data..sub-1..func..sub-1_task-objectviewing_run-02_bold.nii.gz/estimate_hm)
+2024-08-04 22:39:55 | ERROR    | nipype.workflow  | Node estimate_hm.a10 (taskid=74) crashed: /out/logs/crash-20240804-223955-root-estimate_hm.a10-37c458cf-f1b6-4987-8db7-9efc4f237ada.txt
+2024-08-04 22:39:55 | ERROR    | concurrent.futures | exception calling callback for <Future at 0x7fffee8d4a50 state=finished raised BrokenProcessPool>
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+concurrent.futures.process.BrokenProcessPool: A process in the process pool was terminated abruptly while the future was running or pending.
+2024-08-04 22:39:55 | ERROR    | nipype.workflow  | Node estimate_hm.a03 (taskid=60) crashed: /out/logs/crash-20240804-223955-root-estimate_hm.a03-5f10ef9b-d78b-45f5-bc0a-e887aab7178c.txt
+2024-08-04 22:39:55 | ERROR    | concurrent.futures | exception calling callback for <Future at 0x7fffee8d7350 state=finished raised BrokenProcessPool>
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+concurrent.futures.process.BrokenProcessPool: A process in the process pool was terminated abruptly while the future was running or pending.
+2024-08-04 22:39:55 | ERROR    | nipype.workflow  | Node estimate_hm.a09 (taskid=72) crashed: /out/logs/crash-20240804-223955-root-estimate_hm.a09-f27031d9-ef07-469a-b4e3-e959ed61ed77.txt
+2024-08-04 22:39:55 | ERROR    | nipype.workflow  | Node estimate_hm.a11 (taskid=77) crashed: /out/logs/crash-20240804-223955-root-estimate_hm.a11-b354d981-69c1-408a-bcc3-2afc5ece181a.txt
+2024-08-04 22:39:55 | ERROR    | nipype.workflow  | Node estimate_hm.a06 (taskid=66) crashed: /out/logs/crash-20240804-223955-root-estimate_hm.a06-27ab7a45-d578-4cbc-a777-d6cb5ced15b9.txt
+2024-08-04 22:39:55 | ERROR    | nipype.workflow  | Node estimate_hm.a05 (taskid=64) crashed: /out/logs/crash-20240804-223955-root-estimate_hm.a05-39b3a005-dd44-4054-a394-ae0a66d74146.txt
+2024-08-04 22:39:55 | ERROR    | concurrent.futures | exception calling callback for <Future at 0x7fffee8d7a10 state=finished raised BrokenProcessPool>
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+concurrent.futures.process.BrokenProcessPool: A process in the process pool was terminated abruptly while the future was running or pending.
+2024-08-04 22:39:55 | ERROR    | nipype.workflow  | Node estimate_hm.a02 (taskid=58) crashed: /out/logs/crash-20240804-223955-root-estimate_hm.a02-cd967635-52d1-49d2-af87-6574d70c399d.txt
+2024-08-04 22:39:55 | ERROR    | nipype.workflow  | Node estimate_hm.a01 (taskid=56) crashed: /out/logs/crash-20240804-223955-root-estimate_hm.a01-d149942e-8661-4fa5-a6df-58875bfc1a46.txt
+2024-08-04 22:39:55 | ERROR    | concurrent.futures | exception calling callback for <Future at 0x7fffee8e4150 state=finished raised BrokenProcessPool>
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+concurrent.futures.process.BrokenProcessPool: A process in the process pool was terminated abruptly while the future was running or pending.
+2024-08-04 22:39:55 | ERROR    | concurrent.futures | exception calling callback for <Future at 0x7fffee8e5d90 state=finished raised BrokenProcessPool>
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+concurrent.futures.process.BrokenProcessPool: A process in the process pool was terminated abruptly while the future was running or pending.
+2024-08-04 22:39:55 | ERROR    | concurrent.futures | exception calling callback for <Future at 0x7fffee8e74d0 state=finished raised BrokenProcessPool>
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+concurrent.futures.process.BrokenProcessPool: A process in the process pool was terminated abruptly while the future was running or pending.
+2024-08-04 22:39:55 | ERROR    | concurrent.futures | exception calling callback for <Future at 0x7fffee8ee510 state=finished raised BrokenProcessPool>
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+concurrent.futures.process.BrokenProcessPool: A process in the process pool was terminated abruptly while the future was running or pending.
+2024-08-04 22:39:55 | ERROR    | concurrent.futures | exception calling callback for <Future at 0x7fffee8d7910 state=finished raised BrokenProcessPool>
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+concurrent.futures.process.BrokenProcessPool: A process in the process pool was terminated abruptly while the future was running or pending.
+2024-08-04 22:39:55 | ERROR    | concurrent.futures | exception calling callback for <Future at 0x7fffee8fa7d0 state=finished raised BrokenProcessPool>
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+concurrent.futures.process.BrokenProcessPool: A process in the process pool was terminated abruptly while the future was running or pending.
+2024-08-04 22:39:55 | ERROR    | concurrent.futures | exception calling callback for <Future at 0x7fffee8b0050 state=finished raised BrokenProcessPool>
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+concurrent.futures.process.BrokenProcessPool: A process in the process pool was terminated abruptly while the future was running or pending.
+2024-08-04 22:39:55 | ERROR    | concurrent.futures | exception calling callback for <Future at 0x7fffee909b90 state=finished raised BrokenProcessPool>
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 456, in _async_callback
+    result = args.result()
+             ^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+concurrent.futures.process.BrokenProcessPool: A process in the process pool was terminated abruptly while the future was running or pending.

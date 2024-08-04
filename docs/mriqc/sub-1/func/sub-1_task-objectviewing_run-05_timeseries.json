@@ -1,0 +1,57 @@
+{
+  "aor": {
+    "Description": "Mean fraction of outliers per fMRI volume asgiven by AFNI's 3dToutcount",
+    "LongName": "AFNI's Fraction of Outliers per Volume"
+  },
+  "aqi": {
+    "Description": "Mean quality index as computed by AFNI's 3dTqual",
+    "LongName": "AFNI's Quality Index"
+  },
+  "dvars_nstd": {
+    "Description": "Indexes the rate of change of BOLD signal acrossthe entire brain at each frame of data, not normalized.",
+    "LongName": "Derivative of RMS Variance over Voxels,Non-Standardized"
+  },
+  "dvars_std": {
+    "Description": "Indexes the rate of change of BOLD signal acrossthe entire brain at each frame of data, normalized with thestandard deviation of the temporal difference time series",
+    "LongName": "Derivative of RMS Variance over Voxels, Standardized"
+  },
+  "dvars_vstd": {
+    "Description": "Indexes the rate of change of BOLD signal acrossthe entire brain at each frame of data, normalized acrosstime by that voxel standard deviation across time,before computing the RMS of the temporal difference",
+    "LongName": "Derivative of RMS Variance over Voxels, Standardized"
+  },
+  "framewise_displacement": {
+    "Description": "A quantification of the estimated bulk-headmotion calculated using formula proposed by Power (2012)",
+    "LongName": "Framewise Displacement",
+    "Units": "mm"
+  },
+  "rot_x": {
+    "Description": "Estimated Motion Parameter",
+    "LongName": "Rotation Around X Axis",
+    "Units": "rad"
+  },
+  "rot_y": {
+    "Description": "Estimated Motion Parameter",
+    "LongName": "Rotation Around X Axis",
+    "Units": "rad"
+  },
+  "rot_z": {
+    "Description": "Estimated Motion Parameter",
+    "LongName": "Rotation Around X Axis",
+    "Units": "rad"
+  },
+  "trans_x": {
+    "Description": "Estimated Motion Parameter",
+    "LongName": "Translation Along X Axis",
+    "Units": "mm"
+  },
+  "trans_y": {
+    "Description": "Estimated Motion Parameter",
+    "LongName": "Translation Along Y Axis",
+    "Units": "mm"
+  },
+  "trans_z": {
+    "Description": "Estimated Motion Parameter",
+    "LongName": "Translation Along Z Axis",
+    "Units": "mm"
+  }
+}

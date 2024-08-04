@@ -1,0 +1,66 @@
+Node: mriqc_wf.anatMRIQC.synthstrip_wf.pre_n4
+Working directory: /tmp/work/mriqc_wf/anatMRIQC/synthstrip_wf/_in_file_..data..sub-1..anat..sub-1_T1w.nii.gz/pre_n4
+
+Node inputs:
+
+args = <undefined>
+bias_image = <undefined>
+bspline_fitting_distance = <undefined>
+bspline_order = <undefined>
+convergence_threshold = <undefined>
+copy_header = True
+dimension = 3
+environ = {'NSLOTS': '1'}
+histogram_sharpening = <undefined>
+input_image = /tmp/work/mriqc_wf/anatMRIQC/synthstrip_wf/_in_file_..data..sub-1..anat..sub-1_T1w.nii.gz/pre_clip/clipped.nii.gz
+mask_image = <undefined>
+n_iterations = <undefined>
+num_threads = 1
+output_image = <undefined>
+rescale_intensities = True
+save_bias = False
+shrink_factor = <undefined>
+weight_image = <undefined>
+
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 64, in run_node
+    result['result'] = node.run(updatehash=updatehash)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/nipype/pipeline/engine/nodes.py", line 527, in run
+    result = self._run_interface(execute=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/nipype/pipeline/engine/nodes.py", line 645, in _run_interface
+    return self._run_command(execute)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/nipype/pipeline/engine/nodes.py", line 771, in _run_command
+    raise NodeExecutionError(msg)
+nipype.pipeline.engine.nodes.NodeExecutionError: Exception raised while executing Node pre_n4.
+
+Cmdline:
+	N4BiasFieldCorrection -d 3 --input-image /tmp/work/mriqc_wf/anatMRIQC/synthstrip_wf/_in_file_..data..sub-1..anat..sub-1_T1w.nii.gz/pre_clip/clipped.nii.gz --output clipped_corrected.nii.gz -r
+Stdout:
+
+Stderr:
+
+Traceback:
+	Traceback (most recent call last):
+	  File "/opt/conda/lib/python3.11/site-packages/nipype/interfaces/base/core.py", line 397, in run
+	    runtime = self._run_interface(runtime)
+	              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+	  File "/opt/conda/lib/python3.11/site-packages/nipype/interfaces/base/core.py", line 764, in _run_interface
+	    runtime = run_command(
+	              ^^^^^^^^^^^^
+	  File "/opt/conda/lib/python3.11/site-packages/nipype/utils/subprocess.py", line 177, in run_command
+	    stdout, stderr = proc.communicate()
+	                     ^^^^^^^^^^^^^^^^^^
+	  File "/opt/conda/lib/python3.11/subprocess.py", line 1209, in communicate
+	    stdout, stderr = self._communicate(input, endtime, timeout)
+	                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+	  File "/opt/conda/lib/python3.11/subprocess.py", line 2113, in _communicate
+	    ready = selector.select(timeout)
+	            ^^^^^^^^^^^^^^^^^^^^^^^^
+	  File "/opt/conda/lib/python3.11/selectors.py", line 415, in select
+	    fd_event_list = self._selector.poll(timeout)
+	                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+	KeyboardInterrupt
+

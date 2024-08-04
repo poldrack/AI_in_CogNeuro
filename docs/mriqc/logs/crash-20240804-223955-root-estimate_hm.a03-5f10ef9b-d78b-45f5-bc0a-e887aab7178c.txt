@@ -1,0 +1,67 @@
+Node: mriqc_wf.funcMRIQC.fMRI_HMC.estimate_hm
+Working directory: /tmp/work/mriqc_wf/funcMRIQC/fMRI_HMC/_in_file_..data..sub-1..func..sub-1_task-objectviewing_run-04_bold.nii.gz/estimate_hm
+
+Node inputs:
+
+args = -Fourier -twopass
+basefile = <undefined>
+copyorigin = <undefined>
+environ = {}
+in_file = /tmp/work/mriqc_wf/funcMRIQC/fMRI_HMC/_in_file_..data..sub-1..func..sub-1_task-objectviewing_run-04_bold.nii.gz/estimate_hm/sub-1_task-objectviewing_run-04_bold.nii.gz
+in_weight_volume = <undefined>
+interp = <undefined>
+md1d_file = <undefined>
+num_threads = 1
+oned_file = <undefined>
+oned_matrix_save = <undefined>
+out_file = <undefined>
+outputtype = NIFTI_GZ
+timeshift = <undefined>
+verbose = <undefined>
+zpad = 4
+
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.11/site-packages/mriqc/engine/plugin.py", line 64, in run_node
+    result['result'] = node.run(updatehash=updatehash)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/nipype/pipeline/engine/nodes.py", line 527, in run
+    result = self._run_interface(execute=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/nipype/pipeline/engine/nodes.py", line 645, in _run_interface
+    return self._run_command(execute)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/nipype/pipeline/engine/nodes.py", line 771, in _run_command
+    raise NodeExecutionError(msg)
+nipype.pipeline.engine.nodes.NodeExecutionError: Exception raised while executing Node estimate_hm.
+
+Cmdline:
+	3dvolreg -Fourier -twopass -1Dfile sub-1_task-objectviewing_run-04_bold.1D -1Dmatrix_save sub-1_task-objectviewing_run-04_bold.aff12.1D -prefix sub-1_task-objectviewing_run-04_bold_volreg.nii.gz -zpad 4 -maxdisp1D sub-1_task-objectviewing_run-04_bold_md.1D /tmp/work/mriqc_wf/funcMRIQC/fMRI_HMC/_in_file_..data..sub-1..func..sub-1_task-objectviewing_run-04_bold.nii.gz/estimate_hm/sub-1_task-objectviewing_run-04_bold.nii.gz
+Stdout:
+
+Stderr:
+
+Traceback:
+	Traceback (most recent call last):
+	  File "/opt/conda/lib/python3.11/site-packages/nipype/interfaces/base/core.py", line 397, in run
+	    runtime = self._run_interface(runtime)
+	              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+	  File "/opt/conda/lib/python3.11/site-packages/nipype/interfaces/afni/base.py", line 124, in _run_interface
+	    return super(AFNICommandBase, self)._run_interface(
+	           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+	  File "/opt/conda/lib/python3.11/site-packages/nipype/interfaces/base/core.py", line 764, in _run_interface
+	    runtime = run_command(
+	              ^^^^^^^^^^^^
+	  File "/opt/conda/lib/python3.11/site-packages/nipype/utils/subprocess.py", line 177, in run_command
+	    stdout, stderr = proc.communicate()
+	                     ^^^^^^^^^^^^^^^^^^
+	  File "/opt/conda/lib/python3.11/subprocess.py", line 1209, in communicate
+	    stdout, stderr = self._communicate(input, endtime, timeout)
+	                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+	  File "/opt/conda/lib/python3.11/subprocess.py", line 2113, in _communicate
+	    ready = selector.select(timeout)
+	            ^^^^^^^^^^^^^^^^^^^^^^^^
+	  File "/opt/conda/lib/python3.11/selectors.py", line 415, in select
+	    fd_event_list = self._selector.poll(timeout)
+	                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+	KeyboardInterrupt
+

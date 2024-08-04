@@ -1,0 +1,82 @@
+[environment]
+cpu_count = 12
+exec_env = "singularity"
+free_mem = 46.3
+freesurfer_home = "/opt/freesurfer"
+overcommit_policy = "always"
+overcommit_limit = "50%"
+nipype_version = "1.8.6"
+synthstrip_path = "PosixPath('/opt/freesurfer/models/synthstrip.1.pt')"
+templateflow_version = "24.2.0"
+total_memory = 47.21477508544922
+version = "24.1.0.dev0+g3fe90466.d20240417"
+
+[execution]
+ants_float = false
+bids_dir = "/data"
+bids_dir_datalad = true
+bids_database_dir = "/tmp/work/.bids_db-20240804-224017_5ad06c1e-9391-4621-ba04-b9333ffb5854"
+bids_database_wipe = false
+cwd = "/tmp"
+datalad_get = true
+debug = false
+dry_run = false
+dsname = "<unset>"
+float32 = true
+layout = "BIDS Layout: /data"
+log_dir = "/out/logs"
+log_level = 25
+modalities = [ "T1w", "T2w", "bold", "dwi",]
+no_sub = false
+notrack = false
+output_dir = "/out"
+participant_label = [ "1",]
+pdb = false
+reports_only = false
+resource_monitor = false
+run_uuid = "20240804-224017_5ad06c1e-9391-4621-ba04-b9333ffb5854"
+templateflow_home = "/templateflow"
+upload_strict = false
+verbose_reports = false
+webapi_url = "https://mriqc.nimh.nih.gov:443/api/v1"
+work_dir = "/tmp/work"
+write_graph = false
+
+[workflow]
+analysis_level = [ "participant",]
+biggest_file_gb = 2.2720560675926205e-11
+deoblique = false
+despike = false
+fd_thres = 0.2
+fd_radius = 50
+fft_spikes_detector = false
+min_len_dwi = 7
+min_len_bold = 5
+species = "human"
+template_id = "MNI152NLin2009cAsym"
+
+[nipype]
+crashfile_format = "txt"
+get_linked_libs = false
+local_hash_check = true
+nprocs = 12
+omp_nthreads = 1
+plugin = "MultiProc"
+remove_node_directories = false
+resource_monitor = false
+stop_on_first_crash = true
+
+[settings]
+file_path = "/out/logs/config-20240804-224017_5ad06c1e-9391-4621-ba04-b9333ffb5854.toml"
+start_time = 1722811217.5224848
+
+[execution.bids_filters]
+
+[workflow.inputs]
+t1w = [ "/data/sub-1/anat/sub-1_T1w.nii.gz",]
+bold = [ "/data/sub-1/func/sub-1_task-objectviewing_run-01_bold.nii.gz", "/data/sub-1/func/sub-1_task-objectviewing_run-02_bold.nii.gz", "/data/sub-1/func/sub-1_task-objectviewing_run-03_bold.nii.gz", "/data/sub-1/func/sub-1_task-objectviewing_run-04_bold.nii.gz", "/data/sub-1/func/sub-1_task-objectviewing_run-05_bold.nii.gz", "/data/sub-1/func/sub-1_task-objectviewing_run-06_bold.nii.gz", "/data/sub-1/func/sub-1_task-objectviewing_run-07_bold.nii.gz", "/data/sub-1/func/sub-1_task-objectviewing_run-08_bold.nii.gz", "/data/sub-1/func/sub-1_task-objectviewing_run-09_bold.nii.gz", "/data/sub-1/func/sub-1_task-objectviewing_run-10_bold.nii.gz", "/data/sub-1/func/sub-1_task-objectviewing_run-11_bold.nii.gz", "/data/sub-1/func/sub-1_task-objectviewing_run-12_bold.nii.gz",]
+
+[nipype.plugin_args]
+maxtasksperchild = 1
+raise_insufficient = false
+n_procs = 12
