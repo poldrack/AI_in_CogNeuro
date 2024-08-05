@@ -172,5 +172,5 @@ def get_data_frame(subject, h5_dir):
 def get_layouts(data_dir, fmriprep_dir):
     
     layout = BIDSLayout(data_dir)
-    deriv_layout = BIDSLayout(fmriprep_dir, derivatives=True, validate=False)
+    deriv_layout = BIDSLayout(fmriprep_dir, validate=False)
     return layout, deriv_layout
