@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples for 2024 Summer School on AI and Cognitive Neuroscience</title>
+</head>
+<body>
+<h1>Resources for 2024 Summer School on AI and Cognitive Neuroscience</h1>
+<h3>Russ Poldrack</h3>
+
+All code available at <a href="https://github.com/poldrack/AI_in_CogNeuro">
+https://github.com/poldrack/AI_in_CogNeuro</a>.
+All code shared under an MIT License.  All other materials shared under a CC-BY license unless otherwise noted.<p>
+
+
+
+
+    <h2>Jupyter notebooks</h2>
+    LINKOMATIC
+    <p>
+    <h2>Reports for Haxby Subject 1</h2>
+    <a href="fmriprep/sub-1.html">
+        fMRIPrep report
+    </a><p>
+    <a href="mriqc/sub-1_T1w.html">
+        MRIQC anatomical report
+    </a><p>
+    <a href="mriqc/sub-1_task-objectviewing_run-01_bold.html">
+        MRIQC functional report
+    </a><p>
+    <p>
+    <h2>Example group reports for OpenNeuro ds000030</h2>
+    <a href="mriqc_group/group_T1w.html">
+        MRIQC group anat example
+    </a><p>
+    <a href="mriqc_group/group_bold.html">
+        MRIQC group BOLD example
+    </a><p>
+    
+</body>
+</html>
