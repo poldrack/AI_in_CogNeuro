@@ -5,13 +5,18 @@ import sys
 import json
 from poldracklab.utils.run_shell_cmd import run_shell_cmd
 import hashlib
+import pandas as pd
+
 
 if __name__ == "__main__":
 
+    github_push = True
     notebook_dir = 'notebooks'
     notebooks_to_share = [
         'data_setup_haxby.ipynb',
-        'decoding_haxby.ipynb'
+        'decoding_haxby.ipynb',
+        'cv_variability.ipynb',
+        'perceptron.ipynb',
     ]
 
     infofile = 'notebook_sharing.json'
@@ -20,12 +25,13 @@ if __name__ == "__main__":
             info = json.load(f)
     else:
         info = {}
-
+    link_html = []
     # Upload all notebooks
     for notebook in notebooks_to_share:
         nbfile = os.path.join(notebook_dir, notebook)
         hash = hashlib.md5(open(nbfile,'rb').read()).hexdigest()
         if notebook in info and 'hash' in info[notebook]:
+            link_html.append(f'<a href="{info[notebook]['url']}">{notebook}</a><p>')
             if info[notebook]['hash'] == hash:
                 print("Current version of notebook %s already uploaded" % notebook)
                 continue
@@ -34,20 +40,32 @@ if __name__ == "__main__":
             'url': run_shell_cmd(f"nbss-upload {nbfile}")[0][0],
             'hash': hash
         }
+        link_html.append(f'<a href="{info[notebook]['url']}">{notebook}</a><p>')
 
     with open(infofile, 'w') as f:
             json.dump(info, f)
 
-    with open('README.md', 'w') as f:
-        f.write("""
-### Materials for Russ's lectures at the 2024 Summer School on AI in Cognitive Neuroscience.
-#### Haxby data setup and decoding notebooks:\n  
-""")
+    index_stub = open('docs/index.html.stub', 'r').read()
+    index_stub = index_stub.replace('LINKOMATIC', '\n'.join(link_html))
 
-        for notebook in notebooks_to_share:
-            f.write(f"* [{notebook}]({info[notebook]['url']}) \n")
+    # add readings to the end of index.html
+    readings = pd.read_csv('docs/readings.txt', 
+                           encoding='latin-1',
+                           sep='\t')
 
-    print("Pushing README.md to GitHub")
-    run_shell_cmd("git add README.md")
-    run_shell_cmd("git commit -m 'update README.md'")
-    run_shell_cmd("git push")
+    readings_html = '<h2>Readings</h2>'
+
+    categories = readings['Category'].unique()
+    for cat in categories:
+        readings_html += f'<h3>{cat}</h3>\n'
+        for i, row in readings[readings['Category'] == cat].iterrows():
+            readings_html += f'<p><a href="{row["URL"]}">{row["Label"]}</a></p>\n'
+    index_stub += readings_html
+
+    with open('docs/index.html', 'w') as f:
+        f.write(index_stub)
+    if github_push:
+        print("Pushing index.html to GitHub")
+        run_shell_cmd("git add docs/index.html")
+        run_shell_cmd("git commit -m'update index.html'")
+        run_shell_cmd("git push")
