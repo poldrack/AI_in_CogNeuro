@@ -461,7 +461,7 @@ Russ Poldrack
 <li>GPT-4 performs on par with human LeetCode users</li>
 </ul>
 </div><div class="column" style="width:50%;">
-<div id="c2ef7044" class="cell" data-fig-width="100%" data-execution_count="1">
+<div id="0271e728" class="cell" data-fig-width="100%" data-execution_count="1">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -533,7 +533,7 @@ Russ Poldrack
 <h2>GPT-4 coding performance</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div id="dd8ecd5a" class="cell" data-fig-width="100%" data-execution_count="2">
+<div id="f64dfceb" class="cell" data-fig-width="100%" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -556,7 +556,7 @@ Russ Poldrack
 <img data-src="images/overfitting_prompt.png" class="r-stretch"></section>
 <section id="example-of-gpt-4-one-shot-success-1" class="slide level2" style="font-size: 1.5em;">
 <h2>Example of GPT-4 one-shot success</h2>
-<div id="71fcab1c" class="cell" data-execution_count="3">
+<div id="e83991f8" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-3"><a></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LinearRegression</span>
@@ -609,7 +609,7 @@ Russ Poldrack
 </section>
 <section id="example-of-gpt-4-one-shot-success-2" class="slide level2">
 <h2>Example of GPT-4 one-shot success</h2>
-<div id="de839aab" class="cell" data-fig.height="8" data-fig.width="12" data-execution_count="4">
+<div id="c032307d" class="cell" data-fig.height="8" data-fig.width="12" data-execution_count="4">
 <div class="cell-output cell-output-stdout">
 <pre><code>Training errors: [np.float64(0.5941676382175597), np.float64(0.5933518294151625), np.float64(0.5129192853729938)]
 Test errors: [np.float64(0.7419748200389997), np.float64(0.7229125040492909), np.float64(0.9712589627709035)]</code></pre>
@@ -851,7 +851,7 @@ Mean squared error: 5.198941931090807</code></pre>
 <li>60% of tests had 100% line coverage</li>
 </ul>
 </div><div class="column" style="width:50%;">
-<div id="6bd92e66" class="cell" data-fig.height="12" data-fig.width="12" data-execution_count="5">
+<div id="0e994de6" class="cell" data-fig.height="12" data-fig.width="12" data-execution_count="5">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -920,7 +920,7 @@ E         Expected: 60202.716344497014 ± 6.0e+01</code></pre>
 <ul>
 <li>Intentionally obfuscated Python code</li>
 </ul>
-<div id="ee2668bc" class="cell" data-execution_count="6">
+<div id="34b925c5" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a></a><span class="im">from</span> pandas <span class="im">import</span> <span class="op">*</span></span>
 <span id="cb13-2"><a></a><span class="im">from</span> numpy <span class="im">import</span> <span class="op">*</span></span>
 <span id="cb13-3"><a></a><span class="im">from</span> scipy.stats <span class="im">import</span> <span class="op">*</span></span>
@@ -1012,7 +1012,7 @@ Can GPT-4 successfully test its own code?
 <ul>
 <li>Presented ChatGPT with a (GPT-4) generated python script that performs cross-validated classification, with feature selection improperly performed outside of the crossvalidation loop.</li>
 </ul>
-<div id="ad34b374" class="cell" data-execution_count="7">
+<div id="4f630375" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a></a>selector <span class="op">=</span> SelectKBest(score_func<span class="op">=</span>f_classif, k<span class="op">=</span>k)</span>
 <span id="cb14-2"><a></a>X_selected <span class="op">=</span> selector.fit_transform(X, y)</span>
 <span id="cb14-3"><a></a></span>
@@ -1042,7 +1042,7 @@ Can GPT-4 successfully test its own code?
 - "Refactor this code to be PEP8 compliant and use clean coding practices"
   - Refactored code shows no errors or warnings from flake8 linter
 
-::: {#c1557fab .cell execution_count=8}
+::: {#d31b1a9f .cell execution_count=8}
 ``` {.python .cell-code}
 import pandas as pd
 import numpy as np
