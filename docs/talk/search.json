@@ -1,0 +1,471 @@
+[
+  {
+    "objectID": "talk.html#section",
+    "href": "talk.html#section",
+    "title": "AI-assisted coding: Experiments with GPT-4",
+    "section": "",
+    "text": "How many of you have used AI to help with coding?"
+  },
+  {
+    "objectID": "talk.html#todays-punch-lines",
+    "href": "talk.html#todays-punch-lines",
+    "title": "AI-assisted coding: Experiments with GPT-4",
+    "section": "Today’s punch lines",
+    "text": "Today’s punch lines\n\nLarge language models (LLMs) are powerful coding assistants, but have important shortcomings\n\nIf you are not using them to help write code, you are probably throwing away time\n\nLLMs pose fundamental questions about how to educate and to assess learning of coding skills\n\n\nhttps://arxiv.org/abs/2304.13187"
+  },
+  {
+    "objectID": "talk.html#openai-codex",
+    "href": "talk.html#openai-codex",
+    "title": "AI-assisted coding: Experiments with GPT-4",
+    "section": "OpenAI Codex",
+    "text": "OpenAI Codex\n\nReleased August 2021\nBased on GPT-3\n\nTrained on a large body of publicly available source code including 150+ GB of Python code from 54M public GitHub repositories\n\n“Our results show that Codex performs better than most students on code writing questions in typical first year programming exams” (Finnie-Ansley, 2022)\nDeprecated in March 2023 in favor of GPT-3.5"
+  },
+  {
+    "objectID": "talk.html#github-copilot",
+    "href": "talk.html#github-copilot",
+    "title": "AI-assisted coding: Experiments with GPT-4",
+    "section": "Github Copilot",
+    "text": "Github Copilot"
+  },
+  {
+    "objectID": "talk.html#gpt-4-codes-at-human-level",
+    "href": "talk.html#gpt-4-codes-at-human-level",
+    "title": "AI-assisted coding: Experiments with GPT-4",
+    "section": "GPT-4 codes at human level",
+    "text": "GPT-4 codes at human level\n\n\n\nGPT-4 released March 14, 2023\nAI systems were given problems from the LeetCode platform for coding practice/testing\n\nonly problems posted after the GPT-4 training period ended (Sept 2021)\n\nGPT-4 performs on par with human LeetCode users\n\n\n\n\n\n\n\n\n\n\n\n\n\nBubeck et al., 2023"
+  },
+  {
+    "objectID": "talk.html#incremental-improvements-on-gpt-4",
+    "href": "talk.html#incremental-improvements-on-gpt-4",
+    "title": "AI-assisted coding: Experiments with GPT-4",
+    "section": "Incremental improvements on GPT-4",
+    "text": "Incremental improvements on GPT-4\n\n\n\nSince early 2023 improvements have been incremental\n\nMost have been based on GPT-4 with improved prompting techniques or additional training data\n\nGPT-4 still dominates but open-source models are catching up\n\nDeepSeek-Coder-V2 is now comparable to GPT-4\n\n\n\n\n\nHumanEval: 164 coding problems with 8 tests each https://paperswithcode.com/sota/code-generation-on-humaneval"
+  },
+  {
+    "objectID": "talk.html#why-coding-is-an-optimal-use-case-for-llms",
+    "href": "talk.html#why-coding-is-an-optimal-use-case-for-llms",
+    "title": "AI-assisted coding: Experiments with GPT-4",
+    "section": "Why coding is an optimal use case for LLMs",
+    "text": "Why coding is an optimal use case for LLMs\n\nLLMs are most useful in cases where work is difficult to generate but relatively easy to verify\n\nIt’s trivially easy to test whether code is syntatically correct\nIt’s usually straightforward to generate automated tests to determine whether code is functioning correctly"
+  },
+  {
+    "objectID": "talk.html#experiments-with-gpt-4",
+    "href": "talk.html#experiments-with-gpt-4",
+    "title": "AI-assisted coding: Experiments with GPT-4",
+    "section": "Experiments with GPT-4",
+    "text": "Experiments with GPT-4\n\nExperiments performed in March 2023\n\nBefore multimodal support\nBefore supposed degradation of GPT-4 performance in mid-2023 (Chen et al, 2023)"
+  },
+  {
+    "objectID": "talk.html#experiment-1-interactive-coding-with-gpt-4",
+    "href": "talk.html#experiment-1-interactive-coding-with-gpt-4",
+    "title": "AI-assisted coding: Experiments with GPT-4",
+    "section": "Experiment 1: Interactive coding with GPT-4",
+    "text": "Experiment 1: Interactive coding with GPT-4\n\nPresented GPT-4 (via ChatGPT Plus) with 32 coding problems\n\nPrimarily focused on data science/statistics/ML and text mining\n\nCaveats:\n\nUser was fairly novice with prompt engineering\nAssessment was completely subjective and qualitative"
+  },
+  {
+    "objectID": "talk.html#gpt-4-coding-performance",
+    "href": "talk.html#gpt-4-coding-performance",
+    "title": "AI-assisted coding: Experiments with GPT-4",
+    "section": "GPT-4 coding performance",
+    "text": "GPT-4 coding performance\n\n\n\n\n\n\n\n\n\n\n\n\n\nMedian 69 lines of code (31-161)\n“Success” defined as running with no errors and giving a result that was reasonably close to intended result (by my subjective judgment)\n“NS” meant that a relatively novice user (i.e. me) was not able to easily prompt a successful solution (i.e. w/in a few mins of effort)"
+  },
+  {
+    "objectID": "talk.html#example-of-gpt-4-one-shot-success",
+    "href": "talk.html#example-of-gpt-4-one-shot-success",
+    "title": "AI-assisted coding: Experiments with GPT-4",
+    "section": "Example of GPT-4 one-shot success",
+    "text": "Example of GPT-4 one-shot success"
+  },
+  {
+    "objectID": "talk.html#example-of-gpt-4-one-shot-success-1",
+    "href": "talk.html#example-of-gpt-4-one-shot-success-1",
+    "title": "AI-assisted coding: Experiments with GPT-4",
+    "section": "Example of GPT-4 one-shot success",
+    "text": "Example of GPT-4 one-shot success\n\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom sklearn.linear_model import LinearRegression\nfrom sklearn.preprocessing import PolynomialFeatures\nfrom sklearn.metrics import mean_squared_error\nfrom sklearn.pipeline import make_pipeline\n\n# 1. Generate synthetic data\nnp.random.seed(42)\nmean = [0, 0]\ncov = [[1, 0.5], [0.5, 1]]\ntrain_data = np.random.multivariate_normal(mean, cov, 32)\ntest_data = np.random.multivariate_normal(mean, cov, 32)\n\nX_train = train_data[:, 0].reshape(-1, 1)\ny_train = train_data[:, 1]\n\nX_test = test_data[:, 0].reshape(-1, 1)\ny_test = test_data[:, 1]\n\n# 2. Fit three models\nlinear_model = LinearRegression().fit(X_train, y_train)\nsecond_order_model = make_pipeline(PolynomialFeatures(2), LinearRegression()).fit(X_train, y_train)\nninth_order_model = make_pipeline(PolynomialFeatures(9), LinearRegression()).fit(X_train, y_train)\n\n# 3. Compute errors\nmodels = [linear_model, second_order_model, ninth_order_model]\ntrain_errors = [mean_squared_error(y_train, model.predict(X_train)) for model in models]\ntest_errors = [mean_squared_error(y_test, model.predict(X_test)) for model in models]\n\nprint(\"Training errors:\", train_errors)\nprint(\"Test errors:\", test_errors)\n\n# 4. Plot fitted lines\nplt.scatter(X_train, y_train, color='blue', label='Training data')\n\nX_line = np.linspace(X_train.min(), X_train.max(), 100).reshape(-1, 1)\ncolors = ['green', 'red', 'purple']\nlabels = ['Linear', '2nd-order', '9th-order']\n\nfor i, model in enumerate(models):\n    plt.plot(X_line, model.predict(X_line), color=colors[i], label=labels[i])\n\nplt.legend()\nplt.xlabel('Variable 1')\nplt.ylabel('Variable 2')\nplt.title('Fitted lines for different models')\nplt.show()"
+  },
+  {
+    "objectID": "talk.html#example-of-gpt-4-one-shot-success-2",
+    "href": "talk.html#example-of-gpt-4-one-shot-success-2",
+    "title": "AI-assisted coding: Experiments with GPT-4",
+    "section": "Example of GPT-4 one-shot success",
+    "text": "Example of GPT-4 one-shot success\n\n\nTraining errors: [np.float64(0.5941676382175597), np.float64(0.5933518294151625), np.float64(0.5129192853729938)]\nTest errors: [np.float64(0.7419748200389997), np.float64(0.7229125040492909), np.float64(0.9712589627709035)]"
+  },
+  {
+    "objectID": "talk.html#section-1",
+    "href": "talk.html#section-1",
+    "title": "AI-assisted coding: Experiments with GPT-4",
+    "section": "",
+    "text": "GPT-4 is quite good at explaining the conceptual intent of code"
+  },
+  {
+    "objectID": "talk.html#gpt-4-explanation",
+    "href": "talk.html#gpt-4-explanation",
+    "title": "AI-assisted coding: Experiments with GPT-4",
+    "section": "GPT-4 explanation",
+    "text": "GPT-4 explanation"
+  },
+  {
+    "objectID": "talk.html#gpt-4-explanation-1",
+    "href": "talk.html#gpt-4-explanation-1",
+    "title": "AI-assisted coding: Experiments with GPT-4",
+    "section": "GPT-4 explanation",
+    "text": "GPT-4 explanation"
+  },
+  {
+    "objectID": "talk.html#gpt-4-explanation-2",
+    "href": "talk.html#gpt-4-explanation-2",
+    "title": "AI-assisted coding: Experiments with GPT-4",
+    "section": "GPT-4 explanation",
+    "text": "GPT-4 explanation"
+  },
+  {
+    "objectID": "talk.html#gpt-4-explanation-3",
+    "href": "talk.html#gpt-4-explanation-3",
+    "title": "AI-assisted coding: Experiments with GPT-4",
+    "section": "GPT-4 explanation",
+    "text": "GPT-4 explanation"
+  },
+  {
+    "objectID": "talk.html#gpt-4-explanation-4",
+    "href": "talk.html#gpt-4-explanation-4",
+    "title": "AI-assisted coding: Experiments with GPT-4",
+    "section": "GPT-4 explanation",
+    "text": "GPT-4 explanation"
+  },
+  {
+    "objectID": "talk.html#gpt-4-explanation-5",
+    "href": "talk.html#gpt-4-explanation-5",
+    "title": "AI-assisted coding: Experiments with GPT-4",
+    "section": "GPT-4 explanation",
+    "text": "GPT-4 explanation"
+  },
+  {
+    "objectID": "talk.html#interactive-debugging-with-gpt-4",
+    "href": "talk.html#interactive-debugging-with-gpt-4",
+    "title": "AI-assisted coding: Experiments with GPT-4",
+    "section": "Interactive debugging with GPT-4",
+    "text": "Interactive debugging with GPT-4\n\n11/32 attempts required additional prompting to solve the problem\nCommon problems\n\nUse of outdated package features\nType errors (e.g. accessing a list as if it were a dict)\nHallucinating non-existent packages or methods\nUse of inappropriate methods for particular data"
+  },
+  {
+    "objectID": "talk.html#an-example-of-interactive-debugging",
+    "href": "talk.html#an-example-of-interactive-debugging",
+    "title": "AI-assisted coding: Experiments with GPT-4",
+    "section": "An example of interactive debugging",
+    "text": "An example of interactive debugging"
+  },
+  {
+    "objectID": "talk.html#an-example-of-interactive-debugging-1",
+    "href": "talk.html#an-example-of-interactive-debugging-1",
+    "title": "AI-assisted coding: Experiments with GPT-4",
+    "section": "An example of interactive debugging",
+    "text": "An example of interactive debugging\n\nself.continuous_model = LinearRegression()"
+  },
+  {
+    "objectID": "talk.html#an-example-of-interactive-debugging-2",
+    "href": "talk.html#an-example-of-interactive-debugging-2",
+    "title": "AI-assisted coding: Experiments with GPT-4",
+    "section": "An example of interactive debugging",
+    "text": "An example of interactive debugging\n\nValueError: This solver needs samples of at least 2 classes in the data, but the data contains only one class: 1"
+  },
+  {
+    "objectID": "talk.html#an-example-of-interactive-debugging-3",
+    "href": "talk.html#an-example-of-interactive-debugging-3",
+    "title": "AI-assisted coding: Experiments with GPT-4",
+    "section": "An example of interactive debugging",
+    "text": "An example of interactive debugging"
+  },
+  {
+    "objectID": "talk.html#an-example-of-interactive-debugging-4",
+    "href": "talk.html#an-example-of-interactive-debugging-4",
+    "title": "AI-assisted coding: Experiments with GPT-4",
+    "section": "An example of interactive debugging",
+    "text": "An example of interactive debugging\n\nInitial comparison using in-sample train/test data\n\n\n$ python hurdle4.py \nMean squared error: 7.750558995547416\n$ Rscript hurdle.R\n[1] \"Mean squared error: 108.965835640358\"\n\n\nAfter additional manual (human only) debugging: \n\n\n$ python hurdle5.py \nMean squared error: 5.198941931090807\n$ Rscript hurdle_insample.R \n[1] \"Mean squared error: 5.04963049849389\""
+  },
+  {
+    "objectID": "talk.html#llms-inherit-the-stupidity-of-crowds",
+    "href": "talk.html#llms-inherit-the-stupidity-of-crowds",
+    "title": "AI-assisted coding: Experiments with GPT-4",
+    "section": "LLMs inherit the stupidity of crowds",
+    "text": "LLMs inherit the stupidity of crowds\n\nGPT-4 estimates the hurdle model in an incorrect way\n\nAll other Python implementations of the model on Github use this incorrect approach"
+  },
+  {
+    "objectID": "talk.html#gpt-4-coding-failures",
+    "href": "talk.html#gpt-4-coding-failures",
+    "title": "AI-assisted coding: Experiments with GPT-4",
+    "section": "GPT-4 coding failures",
+    "text": "GPT-4 coding failures\n\n9/32 attempts did not lead to a successful outcome\n\nNumber of additional prompts ranged from 1-4\nOne case was a system problem with a required library"
+  },
+  {
+    "objectID": "talk.html#example-the-ez-diffusion-model",
+    "href": "talk.html#example-the-ez-diffusion-model",
+    "title": "AI-assisted coding: Experiments with GPT-4",
+    "section": "Example: The EZ-diffusion model",
+    "text": "Example: The EZ-diffusion model\n\nThe EZ-diffusion model for two-choice response time tasks takes mean response time, the variance of response time, and response accuracy as inputs. The model transforms these data via three simple equations to produce unique values for the quality of information, response conservativeness, and nondecision time. (Wagenmakers et al., 2007)"
+  },
+  {
+    "objectID": "talk.html#prompting-gpt-4-for-the-ez-diffusion-model",
+    "href": "talk.html#prompting-gpt-4-for-the-ez-diffusion-model",
+    "title": "AI-assisted coding: Experiments with GPT-4",
+    "section": "Prompting GPT-4 for the EZ-diffusion model",
+    "text": "Prompting GPT-4 for the EZ-diffusion model"
+  },
+  {
+    "objectID": "talk.html#gpt-4-misunderstanding",
+    "href": "talk.html#gpt-4-misunderstanding",
+    "title": "AI-assisted coding: Experiments with GPT-4",
+    "section": "GPT-4 misunderstanding",
+    "text": "GPT-4 misunderstanding\n\nresult = minimize(ez_diffusion_loss, initial_guess, bounds=bounds)"
+  },
+  {
+    "objectID": "talk.html#gpt-4-misunderstanding-1",
+    "href": "talk.html#gpt-4-misunderstanding-1",
+    "title": "AI-assisted coding: Experiments with GPT-4",
+    "section": "GPT-4 misunderstanding",
+    "text": "GPT-4 misunderstanding\n\nresult = minimize(ez_diffusion_loss, initial_guess, bounds=bounds)"
+  },
+  {
+    "objectID": "talk.html#gpt-4-mathematical-hallucination",
+    "href": "talk.html#gpt-4-mathematical-hallucination",
+    "title": "AI-assisted coding: Experiments with GPT-4",
+    "section": "GPT-4 mathematical hallucination",
+    "text": "GPT-4 mathematical hallucination\n\ndef ez_diffusion(response_times, decisions):\n    accuracy = np.mean(decisions &gt; 0)\n    rt_mean = np.mean(response_times)\n    rt_var = np.var(response_times)\n    \n    v = np.sqrt(np.pi) * (4 * accuracy * (1 - accuracy) / (rt_var / rt_mean ** 2 - 1)) ** (1 / 4)\n    a = rt_mean * (1 - 2 * accuracy) * v / (4 * accuracy * (1 - accuracy))\n    z = a / 2\n\n\nCorrect equation\n\n\n\nGPT-4 equation"
+  },
+  {
+    "objectID": "talk.html#can-multimodal-gpt-4-with-web-access-get-it-right",
+    "href": "talk.html#can-multimodal-gpt-4-with-web-access-get-it-right",
+    "title": "AI-assisted coding: Experiments with GPT-4",
+    "section": "Can multimodal GPT-4 with web access get it right?",
+    "text": "Can multimodal GPT-4 with web access get it right?"
+  },
+  {
+    "objectID": "talk.html#experiment-1-summary",
+    "href": "talk.html#experiment-1-summary",
+    "title": "AI-assisted coding: Experiments with GPT-4",
+    "section": "Experiment 1: Summary",
+    "text": "Experiment 1: Summary\n\nGPT-4 is often very successful at generating useful code\n\nBut it sometimes fails spectacularly, especially with math\n\nGPT-4 does not provide any signals regarding relative confidence in the answer\n\nThe matter-of-fact nature of the answers tends to imply confidence\n\nAll answers need to be verified\n\n“Care should be taken when using the outputs of GPT-4, particularly in contexts where reliability is important” (GPT-4 Technical Report)"
+  },
+  {
+    "objectID": "talk.html#experiment-3-generating-code-and-tests",
+    "href": "talk.html#experiment-3-generating-code-and-tests",
+    "title": "AI-assisted coding: Experiments with GPT-4",
+    "section": "Experiment 3: Generating code and tests",
+    "text": "Experiment 3: Generating code and tests\n\nGPT-4 used to programmatically generate 20 coding problems in each of 5 domains (statistical and data science, physics, theoretical computer science, ecology, economics)\n\ne.g. “Please generate 20 prompts to ask a chatbot to create Python code to solve a variety of physics problems.”"
+  },
+  {
+    "objectID": "talk.html#example-prompt",
+    "href": "talk.html#example-prompt",
+    "title": "AI-assisted coding: Experiments with GPT-4",
+    "section": "Example prompt",
+    "text": "Example prompt\n\n“Create a Python function to model the population growth of a species using the logistic growth equation, given the initial population size, carrying capacity, and growth rate. Please embed the code within an explicit code block, surrounded by triple-backtick markers. Generate realistic values for any examples, and do not use input() commands. Create code that is modular and well-commented. Then, generate a set of pytest tests that exercise each of the functions, embedded in a separate code block.” (Italicized text added)"
+  },
+  {
+    "objectID": "talk.html#gpt-4-coding-results",
+    "href": "talk.html#gpt-4-coding-results",
+    "title": "AI-assisted coding: Experiments with GPT-4",
+    "section": "GPT-4 coding results",
+    "text": "GPT-4 coding results\n\nGPT-4 successfully generated code and tests for each prompt\n97% of the resulting code executed successfully without errors"
+  },
+  {
+    "objectID": "talk.html#gpt-4-test-generation-results",
+    "href": "talk.html#gpt-4-test-generation-results",
+    "title": "AI-assisted coding: Experiments with GPT-4",
+    "section": "GPT-4 test generation results",
+    "text": "GPT-4 test generation results\n\n\n\nCode coverage\n\nAssessed using Coverage.py\n\n60% of tests had 100% line coverage"
+  },
+  {
+    "objectID": "talk.html#gpt-4-testing-results",
+    "href": "talk.html#gpt-4-testing-results",
+    "title": "AI-assisted coding: Experiments with GPT-4",
+    "section": "GPT-4 testing results",
+    "text": "GPT-4 testing results\n\nAll tests successfully executed using pytest\n\nAll tests passed for 46\nAt least 1 tests failed for 54\n\nPrimary causes of failure:\n\nFailure of assertion (45)\nFailure to properly raise error (11)"
+  },
+  {
+    "objectID": "talk.html#gpt-4-testing-results-1",
+    "href": "talk.html#gpt-4-testing-results-1",
+    "title": "AI-assisted coding: Experiments with GPT-4",
+    "section": "GPT-4 testing results",
+    "text": "GPT-4 testing results\nmass_jupiter = 1.8982e27\nradius_jupiter = 6.9911e7\nresult = escape_velocity(mass_jupiter, radius_jupiter)\nassert pytest.approx(result, rel=1e-3) == 59564.97\n\nE       assert 60202.716344497014 ± 6.0e+01 == 59564.97\nE         comparison failed\nE         Obtained: 59564.97\nE         Expected: 60202.716344497014 ± 6.0e+01\n\nIn this case, the code and test value are both correct, depending on where you stand on Jupiter!\n\nNASA’s Jupiter fact sheet claims an escape velocity of 59.5 km/s, which seems to be the source of the test value\nThis is correct when computed using the equatorial radius of 71492 km\nThe value generated by the code (60.2 km/s) is correct when computed using the volumetric mean radius (69911 km)"
+  },
+  {
+    "objectID": "talk.html#ai-code-review",
+    "href": "talk.html#ai-code-review",
+    "title": "AI-assisted coding: Experiments with GPT-4",
+    "section": "AI code review",
+    "text": "AI code review\n\nCode review is essential for improving code quality\n\nBut many researchers do not have access to experts to help review their code\n\nGPT-4 seems to be quite good at reviewing code\nThis could be a huge win for scientific code quality and coding education"
+  },
+  {
+    "objectID": "talk.html#ai-code-review-an-example",
+    "href": "talk.html#ai-code-review-an-example",
+    "title": "AI-assisted coding: Experiments with GPT-4",
+    "section": "AI code review: An example",
+    "text": "AI code review: An example\n\nIntentionally obfuscated Python code\n\n\nfrom pandas import *\nfrom numpy import *\nfrom scipy.stats import *\nmaxD = 12\nhc = ['Nervous', 'Hopeless', 'RestlessFidgety', 'Depressed', 'EverythingIsEffort', 'Worthless', ]\nh=read_csv('https://raw.githubusercontent.com/poldrack/clean_coding/master/data/health.csv',index_col=0)[hc].dropna().mean(1)\ndata=read_csv('https://raw.githubusercontent.com/poldrack/clean_coding/master/data/meaningful_variables_clean.csv',index_col=0)\nsc=[]\nfor i in range(data.shape[1]):\n    if data.columns[i].split('.')[0][-7:] == '_survey':\n        sc=sc+[data.columns[i]]\ndata=data[sc]\ngs=[]\nfor i in range(data.shape[0]):\n    if sum(isnan(data.iloc[i, :])) &gt; 0:\n        pass\n    else:\n        gs=gs+[i]\ndata=data.iloc[gs,:]\nfrom sklearn.preprocessing import scale\ndata_sc = scale(data)\nfrom sklearn.decomposition import FactorAnalysis\nbicv=zeros(maxD)\nfor i in range(1,maxD+1):\n    fa=FactorAnalysis(i)\n    fa.fit(data_sc)\n    bicv[i-1]=i*2 - 2*fa.score(data_sc)\nnpD=argmin(bicv)+1\nfa=FactorAnalysis(npD)\nf=fa.fit_transform(data_sc)\nfor i in range(npD):\n    print(pearsonr(f[:,i],h[gs]))\n    idx=argsort(abs(fa.components_[i, :]))[::-1]\n    for j in range(3):\n        print(data.columns[idx[j]], fa.components_[i, idx[j]])\n\n\nhttps://github.com/poldrack/clean_coding"
+  },
+  {
+    "objectID": "talk.html#ai-code-review-an-example-1",
+    "href": "talk.html#ai-code-review-an-example-1",
+    "title": "AI-assisted coding: Experiments with GPT-4",
+    "section": "AI code review: An example",
+    "text": "AI code review: An example"
+  },
+  {
+    "objectID": "talk.html#ai-code-review-an-example-2",
+    "href": "talk.html#ai-code-review-an-example-2",
+    "title": "AI-assisted coding: Experiments with GPT-4",
+    "section": "AI code review: An example",
+    "text": "AI code review: An example"
+  },
+  {
+    "objectID": "talk.html#can-it-find-analytic-errors",
+    "href": "talk.html#can-it-find-analytic-errors",
+    "title": "AI-assisted coding: Experiments with GPT-4",
+    "section": "Can it find analytic errors?",
+    "text": "Can it find analytic errors?\n\nPresented ChatGPT with a (GPT-4) generated python script that performs cross-validated classification, with feature selection improperly performed outside of the crossvalidation loop.\n\n\nselector = SelectKBest(score_func=f_classif, k=k)\nX_selected = selector.fit_transform(X, y)\n\n# Initialize k-fold cross-validation\nkf = KFold(n_splits=5, shuffle=True, random_state=42)\naccuracies = []\n\n# Cross-validation loop\nfor train_index, test_index in kf.split(X_selected):\n    X_train, X_test = X_selected[train_index], X_selected[test_index]\n    y_train, y_test = y[train_index], y[test_index]\n\n\nAsked it what is wrong with the code (in a separate chat session)"
+  },
+  {
+    "objectID": "talk.html#multimodal-coding-assistance",
+    "href": "talk.html#multimodal-coding-assistance",
+    "title": "AI-assisted coding: Experiments with GPT-4",
+    "section": "Multimodal coding assistance",
+    "text": "Multimodal coding assistance"
+  },
+  {
+    "objectID": "talk.html#ai-assisted-coding-workflow",
+    "href": "talk.html#ai-assisted-coding-workflow",
+    "title": "AI-assisted coding: Experiments with GPT-4",
+    "section": "AI-assisted coding workflow",
+    "text": "AI-assisted coding workflow\n\n\n\nChatGPT with GPT-4 is particularly good at generating code de novo from a prompt\n\nExcept for math where it makes frequent errors\n\nGithub Copilot is optimal for IDE integration\nCoPilot chat with GPT-4 now embedded within VSCode\n\nCurrent code is placed into context"
+  },
+  {
+    "objectID": "talk.html#section-8",
+    "href": "talk.html#section-8",
+    "title": "AI-assisted coding: Experiments with GPT-4",
+    "section": "",
+    "text": "AI coding tools will have major implications for science and education in the coming years"
+  },
+  {
+    "objectID": "talk.html#how-might-ai-coding-tools-improve-science",
+    "href": "talk.html#how-might-ai-coding-tools-improve-science",
+    "title": "AI-assisted coding: Experiments with GPT-4",
+    "section": "How might AI coding tools improve science?",
+    "text": "How might AI coding tools improve science?\n\nHigher quality of research code\n\nCode review/refactoring\nTest generation\nGeneration of simulated data\n\nIt could enable more effective training of researchers in coding\n\nAssisted debugging could help improve debugging skills"
+  },
+  {
+    "objectID": "talk.html#how-might-ai-coding-tools-harm-science",
+    "href": "talk.html#how-might-ai-coding-tools-harm-science",
+    "title": "AI-assisted coding: Experiments with GPT-4",
+    "section": "How might AI coding tools harm science?",
+    "text": "How might AI coding tools harm science?\n\nLower quality of research code\n\nGeneration of complex code with lack of understanding by researcher\n\nAI systems cannot be trusted to test themselves"
+  },
+  {
+    "objectID": "talk.html#ai-generated-code-and-reproducibility",
+    "href": "talk.html#ai-generated-code-and-reproducibility",
+    "title": "AI-assisted coding: Experiments with GPT-4",
+    "section": "AI-generated code and reproducibility",
+    "text": "AI-generated code and reproducibility\n\n\n\nThe results of GPT-4 interactions are largely irreproducible unless extra steps are taken\n\nIt is now possible to set the random seed for inference, but the model can change without warning\nSystem fingerprints are available to detect model changes\n\n\n\nclient.chat.completions.create(\n  model='gpt-4',\n  seed=seed,\n  messages=[\n    {'role': 'system', 'content': f'You are a helpful assistant'},\n    {'role': 'user', 'content': f'Output a random vegetable.'},],)\n\n# Seed: None\nCounter({'Broccoli': 73, 'Carrot': 13, 'Cabbage': 6, 'Cucumber': 4, 'Cauliflower': 3, 'Spinach': 1})\n\n# Seed: 1234\nCounter({'Cucumber': 100})"
+  },
+  {
+    "objectID": "talk.html#educational-issues-around-ai-assisted-coding",
+    "href": "talk.html#educational-issues-around-ai-assisted-coding",
+    "title": "AI-assisted coding: Experiments with GPT-4",
+    "section": "Educational issues around AI-assisted coding",
+    "text": "Educational issues around AI-assisted coding\n\nHow do we assess understanding?\n\nIt will be increasingly easy for students to complete standard coding problems using AI tools.\n\nDo we need to teach coding differently?\n\ne.g. greater focus on debugging, testing, and code review\nFormative assessments using LLM interactions\n\n\n\nFinnie-Ansley et al, 2022"
+  },
+  {
+    "objectID": "talk.html#educational-issues-around-ai-generated-code",
+    "href": "talk.html#educational-issues-around-ai-generated-code",
+    "title": "AI-assisted coding: Experiments with GPT-4",
+    "section": "Educational issues around AI-generated code",
+    "text": "Educational issues around AI-generated code\n\nWe need to focus more on training students to work with AI tools (aka Programming 3.0)\n\nWhat kinds of new interactions do students need to learn?\n\n\n\n\nhttps://martinfowler.com/articles/2023-chatgpt-xu-hao.html"
+  },
+  {
+    "objectID": "talk.html#teaching-test-driven-development",
+    "href": "talk.html#teaching-test-driven-development",
+    "title": "AI-assisted coding: Experiments with GPT-4",
+    "section": "Teaching test-driven development",
+    "text": "Teaching test-driven development\n\n\n\nStarts by designing a test for the desired behavior(s)\n\nEnsuring that the test fails on nonfunctional code\n\nThen code is developed that can pass the test\nOnce the code passes, then it is refactored to make it more robust\nTDD can ensure that AI-generated code performs as advertised\n\nBut you have to know how to generate the appropriate tests!"
+  },
+  {
+    "objectID": "talk.html#from-prompt-engineering-to-flow-engineering",
+    "href": "talk.html#from-prompt-engineering-to-flow-engineering",
+    "title": "AI-assisted coding: Experiments with GPT-4",
+    "section": "From prompt engineering to flow engineering",
+    "text": "From prompt engineering to flow engineering\n\n\n\nAlphaCodium (Ridnik et al., 2024)\n\nStarts with a linear reasoning stage in natural language\nThen moves to an interative generate/run/fix process\n\n\n\n\n\nRidnik et al., 2024"
+  },
+  {
+    "objectID": "talk.html#from-prompt-engineering-to-flow-engineering-1",
+    "href": "talk.html#from-prompt-engineering-to-flow-engineering-1",
+    "title": "AI-assisted coding: Experiments with GPT-4",
+    "section": "From prompt engineering to flow engineering",
+    "text": "From prompt engineering to flow engineering\n\n\n\nDemonstrates several useful principles\n\nLLMs reason better using bullet points (by forcing division into semantically distinct sections)\nLLMs do better generating modular code\nBetter to generate multiple solutions and compare them\nIteratively generate new tests but continue to apply the validated tests\n\n\n\n\n\nRidnik et al., 2024"
+  },
+  {
+    "objectID": "talk.html#conclusions",
+    "href": "talk.html#conclusions",
+    "title": "AI-assisted coding: Experiments with GPT-4",
+    "section": "Conclusions",
+    "text": "Conclusions\n\nAI coding assistants can greatly improve programmer effectiveness\n\nBut they require care and verification\n\nAI coding tools can be very useful for coding education\n\nWe need to focus more on training of logical analysis, testing, and workflow design"
+  },
+  {
+    "objectID": "talk.html#section-9",
+    "href": "talk.html#section-9",
+    "title": "AI-assisted coding: Experiments with GPT-4",
+    "section": "",
+    "text": "The Poldrack Lab\n\n\n\nCollaborators\n\n\n\n\nGasper Begus and Thomas Lu, UC Berkeley"
+  },
+  {
+    "objectID": "talk.html#section-11",
+    "href": "talk.html#section-11",
+    "title": "AI-assisted coding: Experiments with GPT-4",
+    "section": "",
+    "text": "How good is the code generated by GPT-4?"
+  },
+  {
+    "objectID": "talk.html#clean-coding-and-refactoring",
+    "href": "talk.html#clean-coding-and-refactoring",
+    "title": "AI-assisted coding: Experiments with GPT-4",
+    "section": "Clean coding and refactoring",
+    "text": "Clean coding and refactoring\n\n\n\n“Clean code is simple and direct. Clean code reads like well-written prose.” - Grady Booch (from Martin, Clean Code)\n\n\nClean code uses consistent coding standards\nClean code minimizes complexity\nRefactoring\n\nRestructuring existing code to make it cleaner or more maintainable without changing its behavior"
+  },
+  {
+    "objectID": "talk.html#experiment-2-refactoring-with-gpt-4",
+    "href": "talk.html#experiment-2-refactoring-with-gpt-4",
+    "title": "AI-assisted coding: Experiments with GPT-4",
+    "section": "Experiment 2: Refactoring with GPT-4",
+    "text": "Experiment 2: Refactoring with GPT-4\n\nDownloaded 2130 Python files from Github (via API)\n\nOnly one file per user\n272 remained after filtering to avoid autogenerated code and other issues\n\nPrompt (via GPT-4 API): “Please refactor the following Python code to be more readable, adding or rewriting comments as needed.”\nCode quality for original and refactored code assessed using flake8 and radon\n\n\nWith Gašper Beguš and Thomas Lu, UC Berkeley"
+  },
+  {
+    "objectID": "talk.html#refactoring-success",
+    "href": "talk.html#refactoring-success",
+    "title": "AI-assisted coding: Experiments with GPT-4",
+    "section": "Refactoring success",
+    "text": "Refactoring success\n\n100% of prompts produced code\n97% were free of syntax errors (vs 100% of original)"
+  },
+  {
+    "objectID": "talk.html#gpt-4-improves-code-formatting",
+    "href": "talk.html#gpt-4-improves-code-formatting",
+    "title": "AI-assisted coding: Experiments with GPT-4",
+    "section": "GPT-4 improves code formatting",
+    "text": "GPT-4 improves code formatting\n\n\n\nflake8 linter identifies code formatting problems\nRefactored code from GPT4 produces many fewer warnings (per line of code)\n\n.24 for original vs .08 for GPT4 (FDR p&lt;.001)"
+  },
+  {
+    "objectID": "talk.html#gpt-4-reduces-code-complexity",
+    "href": "talk.html#gpt-4-reduces-code-complexity",
+    "title": "AI-assisted coding: Experiments with GPT-4",
+    "section": "GPT-4 reduces code complexity",
+    "text": "GPT-4 reduces code complexity\n\n\n\nReduced # of logical code lines\n\n\nReduced cyclomatic complexity\n\n\nBoth FDR p &lt; .01"
+  },
+  {
+    "objectID": "talk.html#halsted-metrics",
+    "href": "talk.html#halsted-metrics",
+    "title": "AI-assisted coding: Experiments with GPT-4",
+    "section": "Halsted metrics",
+    "text": "Halsted metrics\n\n\n\nBasic quantities:\n\n\\(\\eta_1\\): # distinct operators\n\\(\\eta_2\\): # distinct operands\nvocabulary size: \\(\\eta = \\eta_1 + \\eta_2\\):\n\\(N_1\\): # total operators\n\\(N_2\\): # total operands\nprogram length: \\(N = N_1 + N_2\\)\n\n\n\n\nDerived measures:\n\nVolume: \\(V = N \\times log_2 \\eta\\)"
+  },
+  {
+    "objectID": "talk.html#maintainability-index",
+    "href": "talk.html#maintainability-index",
+    "title": "AI-assisted coding: Experiments with GPT-4",
+    "section": "Maintainability index",
+    "text": "Maintainability index\n\nFunction of 4 other metrics:\n\nHalstead volume (\\(V\\))\nCyclomatic complexity (\\(CC\\))\nSource lines of code (\\(L\\))\nPercent of comment lines (converted to radians) (\\(PC\\))\n\n\n\\[\nMI =\n\\] \\[\nmax[0, 100 \\times \\frac{171 − 5.2 ln(V) − 0.23 CC − 16.2 ln(L) + 50 sin(\\sqrt{2.4PC}))}{171}]\n\\]\n\n\n\nhttps://poldrack.github.io/talks-AIAssistedCoding/"
+  }
+]
